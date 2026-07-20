@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="./favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="color-scheme" content="light dark" />
+    <title>Aneesh Adithya | Full-Stack &amp; Cloud Developer</title>
+    <meta
+      name="description"
+      content="Portfolio of Aneesh Adithya S R — Full-Stack developer specializing in Cloud Computing (AWS). Projects, experience and resume."
+    />
+    <meta name="keywords" content="Aneesh Adithya, portfolio, full-stack developer, cloud computing, AWS, React, Node.js" />
+
+    <!-- Theme: applied before first paint to avoid a light/dark flash.
+         Defaults to the OS-level preference until the visitor picks one via the toggle. -->
+    <script>
+      (function () {
+        try {
+          var saved = localStorage.getItem('theme-preference');
+          var isDark =
+            saved === 'dark' ||
+            (saved !== 'light' && window.matchMedia('(prefers-color-scheme: dark)').matches);
+          document.documentElement.classList.toggle('dark', isDark);
+        } catch (e) {}
+      })();
+    </script>
+
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&family=Space+Grotesk:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>
