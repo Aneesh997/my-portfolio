@@ -4,10 +4,13 @@ import tailwindcss from '@tailwindcss/vite'
 
 // https://vite.dev/config/
 export default defineConfig({
-  // Relative base so the built app works whether it's served from a domain
-  // root (Render static site, Vercel/Netlify) or a GitHub Pages project
-  // subpath (username.github.io/repo-name).
-  base: './',
+  // Absolute base matching the GitHub Pages project subpath
+  // (https://aneesh997.github.io/my-portfolio/). A relative base ('./') can
+  // resolve asset paths incorrectly depending on trailing slashes, which
+  // causes a blank page — the HTML loads but the JS/CSS 404 silently.
+  // If you ever move to a domain root (Vercel/Netlify/custom domain), change
+  // this back to '/'.
+  base: '/my-portfolio/',
   plugins: [react(), tailwindcss()],
   build: {
     // This sandbox's mounted filesystem sometimes blocks deleting old dist/
